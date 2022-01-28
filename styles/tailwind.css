@@ -1,0 +1,8 @@
+.p-12 {
+  padding: 3rem
+}
+
+.text-chateauGreen {
+  --tw-text-opacity: 1;
+  color: rgb(62 181 87 / var(--tw-text-opacity))
+}

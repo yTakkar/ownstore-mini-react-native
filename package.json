@@ -2,38 +2,41 @@
   "name": "own-store-mini-app-rn",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "start": "npm run sync:contract && expo start",
     "eject": "expo eject",
-    "test": "jest --watchAll",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "sync:contract": "rm -rf ./contract && cp -fR ../own-store-api/src/app/contract .",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "tailwind:config:css": "tailwindcss --input styles/input.css --output styles/tailwind.css --no-autoprefixer",
+    "tailwind:config:css:watch": "tailwindcss --input styles/input.css --output styles/tailwind.css --no-autoprefixer --watch",
+    "tailwind:config:json": "tailwind-rn -i styles/tailwind.css -o styles/tailwind.json",
+    "tailwind:config:json:watch": "tailwind-rn -i styles/tailwind.css -o styles/tailwind.json --watch",
+    "tailwind:build": "run-s tailwind:config:css tailwind:config:json",
+    "tailwind:dev": "run-p tailwind:config:css:watch tailwind:config:json:watch"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
+    "dotenv": "^14.3.2",
     "expo": "~44.0.0",
     "expo-asset": "~8.4.4",
-    "expo-constants": "~13.0.0",
+    "expo-constants": "^13.0.1",
     "expo-font": "~10.0.4",
-    "expo-linking": "~3.0.0",
     "expo-splash-screen": "~0.14.0",
     "expo-status-bar": "~1.2.0",
     "expo-web-browser": "~10.1.0",
+    "postcss": "^8.4.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "tailwind-rn": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -45,11 +48,10 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "jest": "^26.6.3",
-    "jest-expo": "~44.0.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "react-test-renderer": "17.0.1",
+    "tailwindcss": "^3.0.17",
     "typescript": "~4.3.5"
-  },
-  "private": true
+  }
 }

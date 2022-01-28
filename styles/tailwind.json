@@ -1,0 +1,16 @@
+{
+	"p-12": {
+		"style": {
+			"paddingTop": 48,
+			"paddingRight": 48,
+			"paddingBottom": 48,
+			"paddingLeft": 48
+		}
+	},
+	"text-chateauGreen": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(62 181 87 / var(--tw-text-opacity))"
+		}
+	}
+}
