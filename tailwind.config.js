@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 const tailwindConfig = {
   mode: 'jit',
-  content: ['./App.tsx'],
+  content: ['./screens/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
     screens: {
       sm: '640px',

@@ -1,8 +1,18 @@
-.p-12 {
-  padding: 3rem
+.flex {
+  display: flex
 }
 
-.text-chateauGreen {
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(206 46 53 / var(--tw-bg-opacity))
+}
+
+.bg-gray100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 249 251 / var(--tw-bg-opacity))
+}
+
+.text-primary {
   --tw-text-opacity: 1;
-  color: rgb(62 181 87 / var(--tw-text-opacity))
+  color: rgb(206 46 53 / var(--tw-text-opacity))
 }

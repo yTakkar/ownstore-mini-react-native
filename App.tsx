@@ -8,6 +8,7 @@ import ApplicationContext from './components/ApplicationContext'
 import useApplicationContext from './hooks/useApplicationContext'
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
 import Router from './components/Router'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const App: React.FC = () => {
   const isLoadingComplete = useCachedResources()
@@ -23,7 +24,9 @@ const App: React.FC = () => {
     <NavigationContainer theme={colorScheme === 'light' ? DefaultTheme : DarkTheme}>
       <ApplicationContext.Provider value={applicationContext}>
         <TailwindProvider utilities={utilities}>
-          <Router />
+          <SafeAreaView style={{ flex: 1 }}>
+            <Router />
+          </SafeAreaView>
         </TailwindProvider>
       </ApplicationContext.Provider>
     </NavigationContainer>
