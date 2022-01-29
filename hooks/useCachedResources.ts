@@ -15,9 +15,11 @@ export default function useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...Ionicons.font,
-          BentonSans: require('../assets/fonts/BentoSans/BentonSans-Regular.ttf'),
-          'BentonSans-Medium': require('../assets/fonts/BentoSans/BentonSans-Medium.ttf'),
-          'BentonSans-Bold': require('../assets/fonts/BentoSans/BentonSans-Bold.ttf'),
+          // 'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+          // 'open-sans-regular': require('../assets/fonts/OpenSans/OpenSans-Regular.ttf'),
+          // 'open-sans-medium': require('../assets/fonts/OpenSans/OpenSans-Medium.ttf'),
+          // 'open-sans-semibold': require('../assets/fonts/OpenSans/OpenSans-SemiBold.ttf'),
+          // 'open-sans-bold': require('../assets/fonts/OpenSans/OpenSans-Bold.ttf'),
         })
       } catch (e) {
         // We might want to provide this error information to an error reporting service

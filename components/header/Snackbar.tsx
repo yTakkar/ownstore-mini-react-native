@@ -3,6 +3,8 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { Pressable, Text, View } from 'react-native'
 import { useTailwind } from 'tailwind-rn'
+import CoreText from '../core/CoreText'
+import CoreView from '../core/CoreView'
 
 interface ISnackbarProps {
   title: string
@@ -15,8 +17,8 @@ const Snackbar: React.FC<ISnackbarProps> = props => {
   const navigation = useNavigation()
 
   return (
-    <View style={tw('bg-white px-4 py-4 flex flex-row items-center justify-between')}>
-      <View style={tw('flex-row items-center')}>
+    <CoreView style={tw('bg-white px-4 py-4 flex flex-row items-center justify-between')}>
+      <CoreView style={tw('flex-row items-center')}>
         <Pressable
           onPress={() => {
             navigation.goBack()
@@ -24,13 +26,13 @@ const Snackbar: React.FC<ISnackbarProps> = props => {
         >
           <Ionicons name="arrow-back-outline" size={24} />
         </Pressable>
-        <Text style={tw('ml-4 text-base')}>{title}</Text>
-      </View>
+        <CoreText style={tw('ml-4 text-base')}>{title}</CoreText>
+      </CoreView>
 
-      <View>
+      <CoreView>
         <Ionicons name="search-outline" size={24} />
-      </View>
-    </View>
+      </CoreView>
+    </CoreView>
   )
 }
 

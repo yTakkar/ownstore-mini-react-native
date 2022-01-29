@@ -2,10 +2,6 @@
   margin-left: 0.5rem
 }
 
-.ml-3 {
-  margin-left: 0.75rem
-}
-
 .ml-4 {
   margin-left: 1rem
 }
@@ -14,20 +10,8 @@
   display: flex
 }
 
-.h-12 {
-  height: 3rem
-}
-
 .h-10 {
   height: 2.5rem
-}
-
-.h-20 {
-  height: 5rem
-}
-
-.w-12 {
-  width: 3rem
 }
 
 .w-10 {
@@ -66,24 +50,9 @@
   padding-bottom: 0.75rem
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
 }
 
 .text-base {

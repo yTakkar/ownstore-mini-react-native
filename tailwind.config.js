@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 const tailwindConfig = {
   mode: 'jit',
-  content: ['./screens/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+  content: ['./screens/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './App.tsx'],
   theme: {
     screens: {
       sm: '640px',
@@ -270,9 +270,8 @@ const tailwindConfig = {
       DEFAULT: '1',
     },
     fontFamily: {
-      primary: ['"BentonSans"', 'Arial', 'Noto Sans', 'sans-serif'],
-      'primary-bold': ['"BentonSans-Bold"', 'Arial', 'Noto Sans', 'sans-serif'],
-      'primary-medium': ['"BentonSans-Medium"', 'Arial', 'Noto Sans', 'sans-serif'],
+      // primary: '"space-mono"',
+      // 'open-sans': '"open-sans-medium"',
     },
     fontSize: {
       xxs: ['0.625rem', { lineHeight: '1rem' }],
