@@ -1,5 +1,49 @@
+.ml-2 {
+  margin-left: 0.5rem
+}
+
+.ml-3 {
+  margin-left: 0.75rem
+}
+
+.ml-4 {
+  margin-left: 1rem
+}
+
 .flex {
   display: flex
+}
+
+.h-12 {
+  height: 3rem
+}
+
+.h-10 {
+  height: 2.5rem
+}
+
+.h-20 {
+  height: 5rem
+}
+
+.w-12 {
+  width: 3rem
+}
+
+.w-10 {
+  width: 2.5rem
+}
+
+.flex-row {
+  flex-direction: row
+}
+
+.items-center {
+  align-items: center
+}
+
+.justify-between {
+  justify-content: space-between
 }
 
 .bg-primary {
@@ -7,12 +51,50 @@
   background-color: rgb(206 46 53 / var(--tw-bg-opacity))
 }
 
-.bg-gray100 {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(249 249 251 / var(--tw-bg-opacity))
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(206 46 53 / var(--tw-text-opacity))
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem
+}
+
+.font-medium {
+  font-weight: 500
+}
+
+.font-bold {
+  font-weight: 700
 }

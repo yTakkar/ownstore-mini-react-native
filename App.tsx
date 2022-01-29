@@ -21,7 +21,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <NavigationContainer theme={colorScheme === 'light' ? DefaultTheme : DarkTheme}>
+    <NavigationContainer>
       <ApplicationContext.Provider value={applicationContext}>
         <TailwindProvider utilities={utilities}>
           <SafeAreaView style={{ flex: 1 }}>
