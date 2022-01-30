@@ -3,6 +3,7 @@ import useCachedResources from './hooks/useCachedResources'
 import useColorScheme from './hooks/useColorScheme'
 import { TailwindProvider, useTailwind } from 'tailwind-rn'
 import tailwindUtilities from './styles/tailwind.json'
+import extraTailwindUtilities from './styles/extra-styles.json'
 import ApplicationContext from './components/ApplicationContext'
 import useApplicationContext from './hooks/useApplicationContext'
 import { NavigationContainer } from '@react-navigation/native'
@@ -22,7 +23,12 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <ApplicationContext.Provider value={applicationContext}>
-        <TailwindProvider utilities={tailwindUtilities}>
+        <TailwindProvider
+          utilities={{
+            ...tailwindUtilities,
+            ...extraTailwindUtilities,
+          }}
+        >
           <SafeAreaView
             style={{
               flex: 1,
