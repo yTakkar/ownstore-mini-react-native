@@ -7,7 +7,7 @@ export default {
     app: {
       name: ENVs.APP_NAME,
     },
-    imageBaseUrl: process.env.APP_IMAGE_BASE_URL,
-    apiBaseUrl: process.env.APP_API_BASE_URL,
+    imageBaseUrl: ENVs.APP_IMAGE_BASE_URL,
+    apiBaseUrl: ENVs.APP_API_BASE_URL,
   },
 }
