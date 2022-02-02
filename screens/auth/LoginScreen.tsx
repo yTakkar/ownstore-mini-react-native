@@ -1,11 +1,12 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import CoreText from '../../components/core/CoreText'
+import CoreView from '../../components/core/CoreView'
 
 const LoginScreen: React.FC = props => {
   return (
-    <View>
-      <Text>Login</Text>
-    </View>
+    <CoreView>
+      <CoreText>Login</CoreText>
+    </CoreView>
   )
 }
 

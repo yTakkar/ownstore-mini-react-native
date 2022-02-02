@@ -8,6 +8,7 @@ import ProfileDetailScreen from '../screens/profile/ProfileDetailScreen'
 import MenuScreen from '../screens/menu/MenuScreen'
 import { Ionicons } from '@expo/vector-icons'
 import { useTailwind } from 'tailwind-rn'
+import WishlistScreen from '../screens/wishlist/WishlistScreen'
 
 const GlobalStack = createNativeStackNavigator()
 
@@ -37,6 +38,21 @@ function CartStackScreen() {
     >
       <CartStack.Screen name="Cart" component={CartScreen} />
     </CartStack.Navigator>
+  )
+}
+
+const WishlistStack = createNativeStackNavigator()
+
+function WishlistStackScreen() {
+  return (
+    <WishlistStack.Navigator
+      initialRouteName="Wishlist"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <WishlistStack.Screen name="Wishlist" component={WishlistScreen} />
+    </WishlistStack.Navigator>
   )
 }
 
@@ -96,9 +112,9 @@ const Router: React.FC = () => {
       />
       <Tab.Screen
         name="WishlistStack"
-        component={CartStackScreen}
+        component={WishlistStackScreen}
         options={{
-          title: 'Cart',
+          title: 'Wishlist',
           tabBarIcon: ({ focused, color, size }) => {
             return <Ionicons name={focused ? 'heart' : 'heart-outline'} size={size} />
           },

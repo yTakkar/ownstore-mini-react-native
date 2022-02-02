@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const isLoadingComplete = useCachedResources()
 
   const colorScheme = useColorScheme()
-  const { applicationContext, dispatchApplicationContext } = useApplicationContext()
+  const { applicationContext } = useApplicationContext()
 
   if (!isLoadingComplete) {
     return null

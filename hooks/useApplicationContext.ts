@@ -22,6 +22,7 @@ const useApplicationContext = () => {
   }
 
   applicationContext.logout = logout
+  applicationContext.dispatch = dispatchApplicationContext
 
   return {
     applicationContext,

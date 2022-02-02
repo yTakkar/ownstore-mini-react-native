@@ -1,11 +1,14 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import CoreText from '../../components/core/CoreText'
+import CoreView from '../../components/core/CoreView'
+import Header from '../../components/header/Header'
 
 const CartScreen: React.FC = props => {
   return (
-    <View>
-      <Text>Cart</Text>
-    </View>
+    <CoreView>
+      <Header />
+      <CoreText>Cart</CoreText>
+    </CoreView>
   )
 }
 

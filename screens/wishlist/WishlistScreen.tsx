@@ -3,13 +3,13 @@ import CoreText from '../../components/core/CoreText'
 import CoreView from '../../components/core/CoreView'
 import Header from '../../components/header/Header'
 
-const ProfileScreen: React.FC = props => {
+const WishlistScreen: React.FC = props => {
   return (
     <CoreView>
       <Header />
-      <CoreText>Profile</CoreText>
+      <CoreText>Wishlist</CoreText>
     </CoreView>
   )
 }
 
-export default ProfileScreen
+export default WishlistScreen
