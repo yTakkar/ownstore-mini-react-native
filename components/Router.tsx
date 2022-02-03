@@ -9,9 +9,9 @@ import MenuScreen from '../screens/menu/MenuScreen'
 import { Ionicons } from '@expo/vector-icons'
 import { useTailwind } from 'tailwind-rn'
 import WishlistScreen from '../screens/wishlist/WishlistScreen'
+import LoginScreen from '../screens/auth/LoginScreen'
 
 const GlobalStack = createNativeStackNavigator()
-
 function GlobalStackScreen() {
   const tw = useTailwind()
 
@@ -30,7 +30,6 @@ function GlobalStackScreen() {
 }
 
 const CartStack = createNativeStackNavigator()
-
 function CartStackScreen() {
   const tw = useTailwind()
 
@@ -48,7 +47,6 @@ function CartStackScreen() {
 }
 
 const WishlistStack = createNativeStackNavigator()
-
 function WishlistStackScreen() {
   const tw = useTailwind()
 
@@ -66,7 +64,6 @@ function WishlistStackScreen() {
 }
 
 const ProfileStack = createNativeStackNavigator()
-
 function ProfileStackScreen() {
   const tw = useTailwind()
 
@@ -84,7 +81,6 @@ function ProfileStackScreen() {
 }
 
 const MenuStack = createNativeStackNavigator()
-
 function MenuStackScreen() {
   const tw = useTailwind()
 
@@ -97,6 +93,7 @@ function MenuStackScreen() {
       initialRouteName="Menu"
     >
       <MenuStack.Screen name="Menu" component={MenuScreen} />
+      <MenuStack.Screen name="Login" component={LoginScreen} />
     </MenuStack.Navigator>
   )
 }

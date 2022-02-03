@@ -30,8 +30,8 @@ const MenuScreen: React.FC = props => {
       label: 'Login',
       subTitle: 'Login to sync your data',
       screen: {
-        stack: 'UserStack',
-        screen: 'ProfileDetail',
+        stack: 'MenuStack',
+        screen: 'Login',
       },
       iconName: 'person-outline',
       show: true,

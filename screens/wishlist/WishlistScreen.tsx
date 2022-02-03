@@ -12,7 +12,15 @@ const WishlistScreen: React.FC = props => {
     return (
       <CoreView style={tw('flex-1 items-center justify-center')}>
         <NoContent message="This page is currently in development. Coming soon..." />
-        <CoreButton label="Visit Home" size={CoreButtonSize.MEDIUM} type={CoreButtonType.SOLID_PRIMARY} url="Home" />
+        <CoreButton
+          label="Visit Home"
+          size={CoreButtonSize.MEDIUM}
+          type={CoreButtonType.SOLID_PRIMARY}
+          navigate={{
+            stack: 'GlobalStack',
+            screen: 'Home',
+          }}
+        />
       </CoreView>
     )
   }

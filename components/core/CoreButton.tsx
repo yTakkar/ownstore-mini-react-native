@@ -7,6 +7,7 @@ import CoreText from './CoreText'
 import { useTailwind } from 'tailwind-rn/dist'
 import { Ionicons } from '@expo/vector-icons'
 import CoreView from './CoreView'
+import { INavigationParams } from '../../types/navigation'
 
 export enum CoreButtonType {
   SOLID_PRIMARY = 'SOLID_PRIMARY',
@@ -26,22 +27,24 @@ export interface ICoreButtonProps {
   iconName?: string
   style?: StyleProp<ViewStyle>
   disabled?: boolean
-  url?: string
+  navigate?: INavigationParams
   onPress?: () => void
 }
 
 const CoreButton: React.FC<ICoreButtonProps> = props => {
-  const { label, type, size, iconName, disabled, url, onPress } = props
+  const { label, type, size, iconName, disabled, navigate, onPress } = props
 
   const navigation = useNavigation<any>()
   const tw = useTailwind()
 
   const handlePress = () => {
-    if (url) {
-      if (url.includes('http')) {
-        WebBrowser.openBrowserAsync(url, {})
+    if (navigate) {
+      if (navigate.externalUrl) {
+        WebBrowser.openBrowserAsync(navigate.externalUrl, {})
       } else {
-        navigation.navigate(url)
+        navigation.navigate(navigate.stack, {
+          screen: navigate.screen,
+        })
       }
     }
     if (onPress) {
@@ -49,7 +52,7 @@ const CoreButton: React.FC<ICoreButtonProps> = props => {
     }
   }
 
-  let textStyle = tw('flex justify-center items-center font-medium')
+  let textStyle = tw('flex justify-center items-center font-bold')
 
   if (type === CoreButtonType.SOLID_PRIMARY) {
     if (disabled) {

@@ -21,6 +21,7 @@ const CoreText: React.FC<ICoreText> = props => {
 
   let fontStyle = tw('')
 
+  // add a custom font here in case
   if (type === CoreTextType.MEDIUM) {
     fontStyle = tw('font-medium')
   }

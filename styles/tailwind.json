@@ -49,6 +49,16 @@
 			"marginRight": 4
 		}
 	},
+	"mb-1": {
+		"style": {
+			"marginBottom": 4
+		}
+	},
+	"mb-2": {
+		"style": {
+			"marginBottom": 8
+		}
+	},
 	"flex": {
 		"style": {
 			"display": "flex"
@@ -139,6 +149,14 @@
 			"borderBottomLeftRadius": 6
 		}
 	},
+	"rounded": {
+		"style": {
+			"borderTopLeftRadius": 4,
+			"borderTopRightRadius": 4,
+			"borderBottomRightRadius": 4,
+			"borderBottomLeftRadius": 4
+		}
+	},
 	"rounded-b-lg": {
 		"style": {
 			"borderBottomRightRadius": 8,
@@ -200,6 +218,15 @@
 			"borderLeftColor": "rgb(165 166 167 / var(--tw-border-opacity))"
 		}
 	},
+	"border-gallery": {
+		"style": {
+			"--tw-border-opacity": 1,
+			"borderTopColor": "rgb(234 234 234 / var(--tw-border-opacity))",
+			"borderRightColor": "rgb(234 234 234 / var(--tw-border-opacity))",
+			"borderBottomColor": "rgb(234 234 234 / var(--tw-border-opacity))",
+			"borderLeftColor": "rgb(234 234 234 / var(--tw-border-opacity))"
+		}
+	},
 	"bg-white": {
 		"style": {
 			"--tw-bg-opacity": 1,
@@ -241,6 +268,30 @@
 			"paddingRight": 16,
 			"paddingBottom": 16,
 			"paddingLeft": 16
+		}
+	},
+	"p-5": {
+		"style": {
+			"paddingTop": 20,
+			"paddingRight": 20,
+			"paddingBottom": 20,
+			"paddingLeft": 20
+		}
+	},
+	"p-2": {
+		"style": {
+			"paddingTop": 8,
+			"paddingRight": 8,
+			"paddingBottom": 8,
+			"paddingLeft": 8
+		}
+	},
+	"p-3": {
+		"style": {
+			"paddingTop": 12,
+			"paddingRight": 12,
+			"paddingBottom": 12,
+			"paddingLeft": 12
 		}
 	},
 	"px-2": {
@@ -291,9 +342,30 @@
 			"paddingBottom": 16
 		}
 	},
+	"px-3": {
+		"style": {
+			"paddingLeft": 12,
+			"paddingRight": 12
+		}
+	},
 	"pb-5": {
 		"style": {
 			"paddingBottom": 20
+		}
+	},
+	"pt-2": {
+		"style": {
+			"paddingTop": 8
+		}
+	},
+	"pr-0": {
+		"style": {
+			"paddingRight": 0
+		}
+	},
+	"pl-3": {
+		"style": {
+			"paddingLeft": 12
 		}
 	},
 	"text-center": {
@@ -323,6 +395,12 @@
 		"style": {
 			"fontSize": 10,
 			"lineHeight": 16
+		}
+	},
+	"text-lg": {
+		"style": {
+			"fontSize": 18,
+			"lineHeight": 28
 		}
 	},
 	"font-medium": {
