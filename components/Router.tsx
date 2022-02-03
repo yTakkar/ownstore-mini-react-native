@@ -32,11 +32,14 @@ function GlobalStackScreen() {
 const CartStack = createNativeStackNavigator()
 
 function CartStackScreen() {
+  const tw = useTailwind()
+
   return (
     <CartStack.Navigator
       initialRouteName="Cart"
       screenOptions={{
         headerShown: false,
+        contentStyle: tw('bg-white'),
       }}
     >
       <CartStack.Screen name="Cart" component={CartScreen} />
@@ -65,11 +68,14 @@ function WishlistStackScreen() {
 const ProfileStack = createNativeStackNavigator()
 
 function ProfileStackScreen() {
+  const tw = useTailwind()
+
   return (
     <ProfileStack.Navigator
       initialRouteName="ProfileDetail"
       screenOptions={{
         headerShown: false,
+        contentStyle: tw('bg-white'),
       }}
     >
       <ProfileStack.Screen name="ProfileDetail" component={ProfileDetailScreen} />
