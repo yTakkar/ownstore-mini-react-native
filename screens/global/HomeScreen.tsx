@@ -1,33 +1,47 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { ActivityIndicator, View } from 'react-native'
+import { ActivityIndicator, FlatList, RefreshControl, View } from 'react-native'
 import { useTailwind } from 'tailwind-rn/dist'
 import ApplicationContext from '../../components/ApplicationContext'
-import CoreText from '../../components/core/CoreText'
 import CoreView from '../../components/core/CoreView'
 import Header from '../../components/header/Header'
+import ProductInfo from '../../components/product/ProductInfo'
 import { HOME_SECTION_ID } from '../../constants/constants'
-import { ISectionInfo } from '../../contract/section'
+import { SectionType } from '../../contract/constants'
+import { IProductSectionInfo, ISectionInfo, ISectionInfoProducts } from '../../contract/section'
 import { getSectionInfo } from '../../http/global'
 
 const HomeScreen: React.FC = props => {
-  const [sections, setSections] = useState<ISectionInfo[]>([])
+  const [sectionProducts, setSectionProducts] = useState<IProductSectionInfo[]>([])
   const [showLoader, toggleLoader] = useState(false)
 
-  const { dispatch } = useContext(ApplicationContext)
+  const {
+    dispatch,
+    device: { width },
+  } = useContext(ApplicationContext)
 
   const tw = useTailwind()
 
   useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = () => {
     toggleLoader(true)
 
     getSectionInfo(HOME_SECTION_ID)
       .then(resp => {
-        setSections(resp)
+        let products: IProductSectionInfo[] = []
+
+        if (resp.type === SectionType.PRODUCTS) {
+          products = (resp as ISectionInfoProducts).products
+        }
+
+        setSectionProducts(products.filter(product => product.isActive))
       })
       .finally(() => {
         toggleLoader(false)
       })
-  }, [])
+  }
 
   const renderLoader = () => {
     return (
@@ -39,20 +53,35 @@ const HomeScreen: React.FC = props => {
 
   const renderContent = () => {
     return (
-      <CoreView>
-        <CoreText>Home</CoreText>
+      <CoreView style={tw('flex-1 flex-row flex-wrap')}>
+        <FlatList
+          data={sectionProducts}
+          keyExtractor={item => `${item.id}`}
+          horizontal={false}
+          numColumns={2}
+          refreshControl={<RefreshControl refreshing={showLoader} onRefresh={() => fetchData()} />}
+          renderItem={({ item }) => {
+            return (
+              <CoreView
+                style={{
+                  width: width / 2,
+                  height: width / 2 + 40,
+                  ...tw('px-2 pb-5'),
+                }}
+              >
+                <ProductInfo product={item.productInfo} />
+              </CoreView>
+            )
+          }}
+        />
       </CoreView>
     )
   }
 
   return (
-    <CoreView
-      style={{
-        flex: 1,
-      }}
-    >
+    <CoreView style={tw('flex-1')}>
       <Header />
-      {true ? renderLoader() : renderContent()}
+      {showLoader ? renderLoader() : renderContent()}
     </CoreView>
   )
 }

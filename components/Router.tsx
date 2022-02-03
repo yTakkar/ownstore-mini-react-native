@@ -13,11 +13,14 @@ import WishlistScreen from '../screens/wishlist/WishlistScreen'
 const GlobalStack = createNativeStackNavigator()
 
 function GlobalStackScreen() {
+  const tw = useTailwind()
+
   return (
     <GlobalStack.Navigator
       initialRouteName="Home"
       screenOptions={{
         headerShown: false,
+        contentStyle: tw('bg-white'),
       }}
     >
       <GlobalStack.Screen name="Home" component={HomeScreen} />

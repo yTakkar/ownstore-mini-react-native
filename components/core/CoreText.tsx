@@ -11,10 +11,11 @@ export enum CoreTextType {
 interface ICoreText {
   type?: CoreTextType
   style?: StyleProp<TextStyle>
+  numberOfLines?: number
 }
 
 const CoreText: React.FC<ICoreText> = props => {
-  const { type = CoreTextType.REGULAR, children, style = {} } = props
+  const { type = CoreTextType.REGULAR, children, style = {}, numberOfLines } = props
 
   const tw = useTailwind()
 
@@ -33,6 +34,7 @@ const CoreText: React.FC<ICoreText> = props => {
         ...fontStyle,
         ...(style as any),
       }}
+      numberOfLines={numberOfLines}
     >
       {children}
     </Text>
