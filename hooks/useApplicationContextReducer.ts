@@ -3,6 +3,7 @@ import { defaultApplicationContext, IApplicationContextProps, IAuthAttributes } 
 import { ApplicationContextAction } from '../types/applicationContext'
 
 // TODO: Break this into module-specific multiple reducers for scaling
+// Redux will be a better choice here for scalable apps
 const applicationReducer = (
   state: IApplicationContextProps,
   action: ApplicationContextAction
@@ -14,22 +15,6 @@ const applicationReducer = (
       return {
         ...state,
         authAttributes,
-      }
-    }
-
-    case 'RESET_USER': {
-      const { device } = state
-      return {
-        ...defaultApplicationContext,
-        device: device,
-      }
-    }
-
-    case 'RESET': {
-      const { device } = state
-      return {
-        ...defaultApplicationContext,
-        device: device,
       }
     }
 

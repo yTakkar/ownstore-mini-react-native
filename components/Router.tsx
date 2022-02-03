@@ -44,11 +44,14 @@ function CartStackScreen() {
 const WishlistStack = createNativeStackNavigator()
 
 function WishlistStackScreen() {
+  const tw = useTailwind()
+
   return (
     <WishlistStack.Navigator
       initialRouteName="Wishlist"
       screenOptions={{
         headerShown: false,
+        contentStyle: tw('bg-white'),
       }}
     >
       <WishlistStack.Screen name="Wishlist" component={WishlistScreen} />
