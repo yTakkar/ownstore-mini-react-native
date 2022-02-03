@@ -77,10 +77,13 @@ function ProfileStackScreen() {
 const MenuStack = createNativeStackNavigator()
 
 function MenuStackScreen() {
+  const tw = useTailwind()
+
   return (
     <MenuStack.Navigator
       screenOptions={{
         headerShown: false,
+        contentStyle: tw('bg-white'),
       }}
       initialRouteName="Menu"
     >

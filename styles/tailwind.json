@@ -29,6 +29,11 @@
 			"marginLeft": 16
 		}
 	},
+	"mr-3": {
+		"style": {
+			"marginRight": 12
+		}
+	},
 	"flex": {
 		"style": {
 			"display": "flex"
@@ -64,11 +69,21 @@
 			"width": 40
 		}
 	},
+	"w-full": {
+		"style": {
+			"width": "100%"
+		}
+	},
 	"flex-1": {
 		"style": {
 			"flexGrow": 1,
 			"flexShrink": 1,
 			"flexBasis": "0%"
+		}
+	},
+	"flex-grow": {
+		"style": {
+			"flexGrow": 1
 		}
 	},
 	"flex-row": {
@@ -107,6 +122,11 @@
 			"borderLeftWidth": 1
 		}
 	},
+	"border-b": {
+		"style": {
+			"borderBottomWidth": 1
+		}
+	},
 	"border-gray200": {
 		"style": {
 			"--tw-border-opacity": 1,
@@ -134,6 +154,15 @@
 			"borderLeftColor": "rgb(165 166 167 / var(--tw-border-opacity))"
 		}
 	},
+	"border-gray400": {
+		"style": {
+			"--tw-border-opacity": 1,
+			"borderTopColor": "rgb(220 221 223 / var(--tw-border-opacity))",
+			"borderRightColor": "rgb(220 221 223 / var(--tw-border-opacity))",
+			"borderBottomColor": "rgb(220 221 223 / var(--tw-border-opacity))",
+			"borderLeftColor": "rgb(220 221 223 / var(--tw-border-opacity))"
+		}
+	},
 	"bg-gray300": {
 		"style": {
 			"--tw-bg-opacity": 1,
@@ -156,6 +185,14 @@
 		"style": {
 			"--tw-bg-opacity": 1,
 			"backgroundColor": "rgb(241 242 243 / var(--tw-bg-opacity))"
+		}
+	},
+	"p-4": {
+		"style": {
+			"paddingTop": 16,
+			"paddingRight": 16,
+			"paddingBottom": 16,
+			"paddingLeft": 16
 		}
 	},
 	"px-5": {
@@ -255,5 +292,44 @@
 			"--tw-text-opacity": 1,
 			"color": "rgb(206 46 53 / var(--tw-text-opacity))"
 		}
+	},
+	"text-gray900": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(43 44 45 / var(--tw-text-opacity))"
+		}
+	},
+	"text-gray700": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(108 109 111 / var(--tw-text-opacity))"
+		}
+	},
+	"transition-all": {
+		"style": {
+			"transitionProperty": "all",
+			"transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+			"transitionDuration": "150ms"
+		}
+	},
+	"hover:bg-gray100:hover": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(249 249 251 / var(--tw-bg-opacity))"
+		}
+	},
+	"lg:px-2": {
+		"style": {
+			"paddingLeft": 8,
+			"paddingRight": 8
+		},
+		"media": "(min-width: 1024px)"
+	},
+	"lg:py-5": {
+		"style": {
+			"paddingTop": 20,
+			"paddingBottom": 20
+		},
+		"media": "(min-width: 1024px)"
 	}
 }

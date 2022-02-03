@@ -26,7 +26,7 @@ const Header: React.FC<IHeaderProps> = props => {
       >
         <CoreView style={tw('flex-row items-center')}>
           <CoreImage source={require('../../assets/images/icon.png')} style={tw('w-10 h-10')} />
-          <CoreText style={tw('text-base ml-2 font-medium')} type={CoreTextType.MEDIUM}>
+          <CoreText style={tw('text-base ml-2')} type={CoreTextType.MEDIUM}>
             {appConfig.global.app.name}
           </CoreText>
         </CoreView>
